@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth.views import login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^$', login, {'template_name':'PruebaRegistro.hmtl}, name='login'),
 ]
+
+
